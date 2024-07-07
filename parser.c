@@ -1,5 +1,3 @@
-//Harun Altun
-//02200201057
 #include<stdio.h>
 #include<string.h>
 #include <stdint.h>
@@ -7,7 +5,7 @@
 int index;
 int x = 0;
 int j = 1;
-//if ve '(' kontrolü
+//if ve '(' kontrolÃ¼
 int if_par(char kelime[]) {
   if (kelime[index] == 'i' && kelime[index + 1] == 'f') {
     if (kelime[index + 2] == '(') {
@@ -51,7 +49,7 @@ int id_kont(char kelime[]) {
 
   return index;
 }
-//operatör kontrol
+//operatÃ¶r kontrol
 int op_kont(char kelime[]) {
   if (kelime[index] == '<' || kelime[index] == '>' || kelime[index] == '=') {
     index++;
@@ -66,7 +64,7 @@ int op_kont(char kelime[]) {
   }
   return index;
 }
-//')'ve '{' kontrolü
+//')'ve '{' kontrolÃ¼
 int kapac(char kelime[]) {
   if (kelime[index] == ')') {
     index++;
@@ -84,7 +82,7 @@ int kapac(char kelime[]) {
   }
   return index;
 }
-//a=a-100 bu koddaki esitligin kontrolü
+//a=a-100 bu koddaki esitligin kontrolÃ¼
 int esitkont(char kelime[]) {
   if (kelime[index] == '=') {
     x = 1;
@@ -105,7 +103,7 @@ int islemkont(char kelime[]) {
   }
   return index;
 }
-//süslü kapama parantezi  var mi yok mu kontrolü
+//sÃ¼slÃ¼ kapama parantezi  var mi yok mu kontrolÃ¼
 int suskapa(char kelime[]) {
   if (kelime[index] == '}') {
     x = 1;
@@ -116,7 +114,7 @@ int suskapa(char kelime[]) {
   }
   return index;
 }
-//else if ve '(' açma kontrolü
+//else if ve '(' aÃ§ma kontrolÃ¼
 int elseifackont(char kelime[]) {
   if (kelime[index] == 'e' && kelime[index + 1] == 'l' && kelime[index + 2] == 's' && kelime[index + 3] == 'e' && kelime[index + 4] == 'i' && kelime[index + 5] == 'f') {
     index += 6;
@@ -136,7 +134,7 @@ int elseifackont(char kelime[]) {
   }
   return index;
 }
-//else ve süslü parantez açma kontrolü
+//else ve sÃ¼slÃ¼ parantez aÃ§ma kontrolÃ¼
 int elsesuskont(char kelime[]) {
   if (kelime[index] == 'e' && kelime[index + 1] == 'l' && kelime[index + 2] == 's' && kelime[index + 3] == 'e') {
     index += 4;
@@ -238,7 +236,7 @@ int main() {
   }
   printf(" }");
 
-  //if kontrolü
+  //if kontrolÃ¼
 
   index = 0;
   if_par(kelime);
@@ -369,7 +367,7 @@ int main() {
     }
 
   }
-  //else kontrolü
+  //else kontrolÃ¼
 if(kelime[index]=='e'&&kelime[index+1]=='l'){
   elsesuskont(kelime);
   if (x == 0) {
